@@ -3,15 +3,12 @@
   "version": "2.0.0",
   "description": "> Transform your GitHub into a job-ready, recruiter-approved portfolio in under 60 seconds.",
   "main": "index.js",
-  "scripts": {
-    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "frontend": "cd Frontend && npm run dev",
-    "backend": "cd Backend && (./.venv/bin/uvicorn main:app --reload --port 8000 || uvicorn main:app --reload --port 8000)",
-    "install:frontend": "cd Frontend && npm install",
-    "install:backend": "cd Backend && pip install -r requirements.txt",
-    "install:client": "cd Frontend && npm install",
-    "install:python": "cd Backend && pip install -r requirements.txt"
-  },
+ "scripts": {
+  "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+  "frontend": "cd Frontend && npm run dev",
+  "backend": "cd Backend && ./.venv/bin/uvicorn main:app --reload --port 8000",
+  "build": "cd Frontend && npm run build"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ArmanSunasara/Gitfolio.git"
