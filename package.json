@@ -1,13 +1,16 @@
 {
   "name": "github-project",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "> Transform your GitHub into a job-ready, recruiter-approved portfolio in under 60 seconds.",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "frontend": "cd client && npm run dev",
-    "backend": "cd server && npm start",
-    "ml-service": "cd ml-service && uvicorn main:app --reload --port 8000"
+    "frontend": "cd Frontend && npm run dev",
+    "backend": "cd Backend && (./.venv/bin/uvicorn main:app --reload --port 8000 || uvicorn main:app --reload --port 8000)",
+    "install:frontend": "cd Frontend && npm install",
+    "install:backend": "cd Backend && pip install -r requirements.txt",
+    "install:client": "cd Frontend && npm install",
+    "install:python": "cd Backend && pip install -r requirements.txt"
   },
   "repository": {
     "type": "git",

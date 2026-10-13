@@ -1,36 +1,38 @@
-/server/.env
-/server/node_modules
+# Dependencies
+node_modules/
+Frontend/node_modules/
 
+# Environment files
+.env
+Frontend/.env
+Backend/.env
 
-
-/ml-service/.env
-/ml-service/.venv
-/ml-service/__pycache__
-/ml-service/temp
-
-
-
-/client/node_modules
-/client/.env
-
-
-
-/node_modules
-/dist
-/build
-/README1.md
-/.vscode
-/.idea
-.DS_Store
-*.log
+# Python virtual environment & cache
+Backend/.venv/
+Backend/__pycache__/
+Backend/.pytest_cache/
+Backend/temp/
+__pycache__/
 *.pyc
 *.pyo
 *.pyd
-__pycache__/
+
+# Build outputs
+Frontend/dist/
+dist/
+build/
+
+# IDE & OS files
+.DS_Store
+*.log
 *.swp
+.vscode/
+.idea/
+
+# Agent caches
 .claude
-.claude_cache   
+.claude_cache
 .claude_cache/*
 .codex
 .agents
-temp
+temp/
